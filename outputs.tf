@@ -6,7 +6,7 @@
 ###############
 
 # Add outputs for the resource
-# output "resource_group_name_example" {
-#  value       = azurerm_resource_group.main_rg.name
+# output "template_example" {
+#  value       = template.name
 #  description = "Resource group name"
 # }

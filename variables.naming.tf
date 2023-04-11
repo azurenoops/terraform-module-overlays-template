@@ -16,19 +16,15 @@ variable "name_suffix" {
   default     = ""
 }
 
-variable "custom_rg_name" {
-  description = "Optional custom resource group name"
-  type        = string
-  default     = ""
-}
-
 variable "use_naming" {
-  description = "Use the Azure NoOps naming provider to generate default resource name. `custom_rg_name` override this if set. Legacy default name is used if this is set to `false`."
+  description = "Use the Azure NoOps naming provider to generate default resource name. `storage_account_custom_name` override this if set. Legacy default name is used if this is set to `false`."
   type        = bool
   default     = true
 }
 
-variable "use_location_short_name" {
-  description = "Use Short Location Name in the naming provider to generate default resource name."
-  type        = bool
+# Custom naming override
+variable "custom_resource_group_name" {
+  description = "The name of the custom resource group to create. If not set, the name will be generated using the `org_name`, `workload_name`, `deploy_environment` and `environment` variables."
+  type        = string
+  default     = null
 }
