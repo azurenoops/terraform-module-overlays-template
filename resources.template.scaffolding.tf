@@ -18,7 +18,7 @@ module "mod_azregions" {
 #---------------------------------------------------------
 # Resource Group Creation
 #----------------------------------------------------------
-data "azurerm_resource_group" "rgrp" {
+data "azurerm_resource_group" "rg" {
   count = var.create_resource_group == false ? 1 : 0
   name  = var.existing_resource_group_name
 }
